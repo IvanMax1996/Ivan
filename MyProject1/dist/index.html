@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Это моя первая страница.">
+	<meta name="author" content="Andrey">
+	<meta name="keywords" content="сайт визитка, разработка, веб-разработчик, веб-программист.">
+	<meta name="robots" content="all">
+	<meta property="og:title" content="Это моя первая страница.">
+	<title>Андрей Браун - Веб-разработчик</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+
+    <script type="text/javascript">
+        function animate(elem) {
+            var effect = elem.data("effect");
+            elem.addClass("animate__animated " + effect).one("animationend", function() {
+                elem.removeClass("animate__animated " + effect);
+            });
+        }
+        
+        $(document).ready(function() {
+            $(".ani1, .ani2, .ani3, .ani4, .ani5, .ani6").mouseenter(function() {
+                animate($(this));
+            });
+        });
+    </script>
+
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 5000);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+
+	<header>
+		<nav>
+            <section class="nav" id="nav">
+                <div class="container">
+			         <div class="logo">Андрей Браун</div>
+			         <div class="menu">
+				        <ul>
+                            <li><a href="#">Обо мне</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Кейсы</a></li>
+                            <li><a href="#">Прайс</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Контакты</a></li>
+				        </ul>
+			         </div>
+                </div>
+            </section>
+		</nav>
+	</header>
+
+	<main>
+        <section class="main" id="main">
+            <div class="container">
+			     <div class="title_container">
+				    <h1>
+				    Привет
+				    <br> 
+				    Я Андрей Браун
+				    </h1>
+				    <h4>Фулл стек веб-разработчик и Android - разработчик</h4>
+				    <input type="submit" value="Обо мне">
+				    <input type="submit" value="Мои работы">
+			     </div>
+            </div> 
+		</section>
+    </main>
+
+	<section class="myinfo" id="myinfo">
+        <div class="container">
+            <div class="my_info">
+                <h3 class="ani1" data-effect="animate__bounce">Обо мне</h3>
+                <img src="img/myinfo_line.png" alt="А где же линия?">
+                <div class="circle_photo">
+                    <img src="img/photo1.png" alt="Тут должно быть моё фото)">
+                </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque iste repellat id cum odio at totam enim ut esse modi, odit eum eos error saepe eligendi velit, quia temporibus, impedit. Iste, consequatur, esse.</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde porro obcaecati perspiciatis dignissimos, eaque iusto magni architecto asperiores error ad excepturi, commodi dolor fugit hic dolorum, adipisci aspernatur nemo. Quae fuga veritatis voluptatum!</p>
+                <div class="myinfo_button">
+                    <button type="submit">
+                        <img src="img/ico.png" alt="А где же иконка?"> Скачать резюме
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 	<section class="skills" id="skills">
+        <div class="container">
+        	<div class="skills_container">
+                <h3 class="ani2" data-effect="animate__pulse">Что я умею</h3>
+                <img src="img/skills_line.png" alt="А где же линия?">
+            </div>
+
+            <div class="skills_list">
+                <div class="web_design">
+                    <img class="ani3" data-effect="animate__wobble" src="img/web-design.png" alt="А где же веб-дизайн?">
+                    <h4>Веб-Дизайн</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae earum dolores, beatae? Ducimus ipsum porro sed!</p>
+                </div>
+                <div class="sign">
+                    <img class="ani4" data-effect="animate__rotateIn" src="img/sign.png" alt="А где же разработка?">
+                    <h4>Разработка</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro nisi saepe nam, a!</p>
+                </div>
+                <div class="seo">
+                    <img class="ani5" data-effect="animate__zoomInDown" src="img/rocket.png" alt="А где же оптимизация?">
+                    <h4>CEO-Оптимизация</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta velit, assumenda, quaerat deleniti architecto enim rerum.</p>
+                </div>
+                <div class="marketing">
+                    <img class="ani6" data-effect="animate__flip" src="img/speaker.png" alt="А где же громкоговоритель?">
+                    <h4>Маркетинг</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aspernatur necessitatibus enim eos! Labore, necessitatibus?</p>
+                </div>
+            </div>  
+        </div> 
+    </section>
+    
+    <section class="cases" id="cases">
+        <div class="case1">
+            <div class="case_title"> <h3>Кейсы</h3> </div>
+            <div class="image"> <img src="img/cases_line.png" alt="А где линия?"> </div>
+            <div class="text"> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste optio, voluptate minus atque mollitia ex sunt quis nam dolores perferendis dolorem.</p>
+            </div>
+            <div class="image2"> <img src="img/image.png" alt="А где кейс?"> </div>
+        </div>
+
+        <div class="case2">
+            <div class="client">
+                <h3>Cient:</h3><span>Какая-то компания</span>
+                <h3>Website:</h3><span>http://www.somedomain.com</span>
+            </div>
+            <div class="project">
+                <h3>Название проекта</h3>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit., sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</span>
+            </div> 
+            <div class="but">
+                <button type="button" value=""> Visit live site </button> 
+            </div>
+        </div>
+    </section>
+
+    <section class="costs" id="costs">
+        <div class="cost">
+            <h2>Расчёт стоимости</h2>
+            <div class="cost1">
+                <h3>ТИП САЙТА</h3>
+                <select name="list1" id="list1">
+                    <option value="Opt1">Выберите пункт...</option>
+                </select>
+            </div>
+            <div class="cost2">
+                <h3>ДИЗАЙН</h3>
+                <select name="list2" id="list2">
+                    <option value="Opt2">Выберите пункт...</option>
+                </select>
+            </div>
+            <div class="cost3">
+                <h3>АДАПТИВНОСТЬ</h3>
+                <select name="list3" id="list3">
+                    <option value="Opt3">Выберите пункт...</option>
+                </select>
+            </div>
+
+            <div class="costs_line">
+                <img src="img/costs_line.png" alt="А где же линия?">
+            </div>
+
+            <div class="cost_seting">
+                <div class="cost4"> <h4>Сроки</h4> <h4>Стоимость</h4> </div>
+                <div class="cost5"> <p>0</p> <p>0</p> </div>
+           </div>
+        </div>
+    </section>
+
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats_info">
+                <h3>Немного статистики</h3>
+                <img src="img/stats_line.png" alt="А где же линия?">
+            </div>
+
+            <div class="stats_list">
+                <div class="happy_client">
+                    <img src="img/smile.png" alt="А где же смайл?">
+                    <h4>120</h4>
+                    <p>Счастливые клиенты</p>
+                </div>
+                <div class="time_work">
+                    <img src="img/brackets.png" alt="А где же скобки?">
+                    <h4>4,600</h4>
+                    <p>Часов работы</p>
+                </div>
+                <div class="project_finish">
+                    <img src="img/check mark.png" alt="">
+                    <h4>340</h4>
+                    <p>Проектов завершено</p>
+                </div>
+                <div class="reward">
+                    <img src="img/cup.png" alt="">
+                    <h4>23</h4>
+                    <p>Наград получено</p>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="review">
+                <h3>Отзывы</h3>
+                <img src="img/reviews_line.png" alt="">
+                <div class="review_info">
+                    <img src="img/photo2.png" alt="А где же фото?">
+                </div>
+
+                <div class="review_text">
+                    <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante 
+                    <br>
+                    facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</small></p>
+                    <p>Михаил, Ген директор ПАО "Газпром"</p>
+                </div>
+
+                <div class="review_button">
+                    <button type="button"></button>
+                    <button type="button"></button>
+                    <button type="button"></button>
+                </div>       
+            </div>                 
+        </div>    
+    </section>
+
+    <footer>
+        <section class="contacts" id="contacts">
+            <div class="container">
+                <div class="contacts_info">
+                        <h3>Мои контакты</h3>
+                        <img src="img/contacts_line.png" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo</p>
+                </div>
+
+                <div class="contacts_list">
+                    <div class="address">
+                        <img src="img/mark.png" alt="А где маркер?">
+                        <p><a href="">Санкт Петербург<br>Невский проспект 11</a></p>
+                    </div>
+                    <div class="mail">
+                        <img src="img/envelope.png" alt="А где конверт?">
+                        <p><a href="">info@companyname.com</a></p>
+                    </div>
+                    <div class="telephone">
+                        <img src="img/tube.png" alt="А где трубка?">
+                        <p><a href="">+7 999 999-99-99</a></p>
+                    </div>
+                </div>
+
+                <div class="recall">
+                    <h3>Оставьте мне сообщение</h3>
+                </div>
+                <form action="" method ="post">
+                    <div class="contacts_form_input">
+                        <div class="input1">
+                            <input type="name" name="input1" value="" placeholder="Имя">
+                        </div>
+                        <div class="input2">
+                            <input type="email" name="inpu2" value="" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="contacts_form_textarea">
+                        <div class="textarea">
+                            <textarea name="input3" id="1" cols="48" rows="10" value="" placeholder="Сообщение"></textarea>
+                        </div>
+                    </div>
+                    <div class="contacts_button">
+                        <input type="submit" value="Отправить">
+                    </div> 
+                </form>
+            </div>
+        </section> 
+
+        <section class="tails" id="tails">
+            <div class="tail">
+                <h6>Copyright 2021 Андрей Браун. Design by Web</h6>
+            </div>
+        </section>
+    </footer>
+</body>
+</script>
+</html>
