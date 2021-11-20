@@ -9,38 +9,14 @@
     <meta property="og:title" content="Это моя первая страница.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Андрей Браун - Веб-разработчик</title>
-    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     
-    <script type="text/javascript">
-        function animate(elem) {
-            var effect = elem.data("effect");
-            elem.addClass("animate__animated " + effect).one("animationend", function() {
-                elem.removeClass("animate__animated " + effect);
-            });
-        }
-        
-        $(document).ready(function() {
-            $(".ani1, .ani2, .ani3, .ani4, .ani5, .ani6").mouseenter(function() {
-                animate($(this));
-            });
-        });
-    </script>
-
-    <script>
-        window.onload = function () {
-            document.body.classList.add('loaded_hiding');
-            window.setTimeout(function () {
-                document.body.classList.add('loaded');
-                document.body.classList.remove('loaded_hiding');
-            }, 1000);
-        }
-    </script>
+    
 </head>
 
 <body>
@@ -362,6 +338,34 @@
             </div>
         </section>
     </footer>
+    
     <script src="js/myScript.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+        function animate(elem) {
+            var effect = elem.data("effect");
+            elem.addClass("animate__animated " + effect).one("animationend", function() {
+                elem.removeClass("animate__animated " + effect);
+            });
+        }
+        
+        $(document).ready(function() {
+            $(".ani1, .ani2, .ani3, .ani4, .ani5, .ani6").mouseenter(function() {
+                animate($(this));
+            });
+        });
+    </script>
+
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
