@@ -1,6 +1,3 @@
-.col {
-    border: 2px solid black;
-}
 .preloader {
     position: fixed;
     left: 0;
@@ -143,24 +140,28 @@ nav {
     transform: scale(1);
 }
 
-.menu li a:active {
-    transform: scale(1.1);
-}
-
-.menu li a:visited {
-    color: white;
-}
-.menu li a:hover {
-    color: orange;
-}
 
 .white-btn:visited {
     color: white;
 }
 
+.menu li a:visited {
+    color: white;
+}
+
+.menu li a:active {
+    transform: scale(1.1);
+}
+.menu li a:hover {
+    color: orange;
+}
+
+.activemenu {
+    font-size: 15px;
+    color: orange !important;
+}
+
 main {
-    position: relative;
-    top: 60px;
     display: block;
     width: 100%;
     height: 100%;
@@ -184,6 +185,10 @@ main {
         opacity: 1;
         margin-left: 0px;
     }
+}
+
+.title_container {
+    margin-top: 150px;
 }
 
 .title_container input {
@@ -486,6 +491,45 @@ main {
     text-align: end;
 }
 
+.element5, .element6, .element7 {
+    opacity: 0;
+}
+
+.element5.show, .element6.show, .element7.show,  {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.cost_btn button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 42px;
+    height: 45px;
+    width: 200px;
+    border: 2px solid #63b5ae;
+    background-color: #63b5ae;
+    border-radius: 5px;
+    font-size: 20.83px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    color: #fff;
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.cost_btn button:hover {
+    background: #50908a;
+    border: 2px solid #50908a;
+}
+
+.cost_btn button:active {
+    transform: scale(1.1);
+    background: #63b5ae;
+    border: 2px solid #63b5ae;
+}
+
 .stats {
     background: url(../img/bg_stats.png);
     width: 100%;
@@ -575,7 +619,7 @@ main {
     font-weight: 600;
     color: #526070;
     margin-top: 35px;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -594,6 +638,7 @@ main {
 }
 
 .contacts {
+    margin-top: 20px;
     width: 100%;
     height: auto;
     background: url(../img/bg_contacts.png) center/cover no-repeat;
@@ -710,6 +755,64 @@ main {
     color: red;
 }
 
+#bg_popup {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#popup {
+    background: #fff;
+    width: 500px;
+    margin: 25% auto;
+    padding: 5px 20px 13px 20px;
+    border: 2px solid #1BA600;
+    position: relative;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#popup button {
+    margin-top: 20px;
+    font-size: 20px;
+    border: 3px solid black;
+    background-color: #263244;
+    margin-bottom: 20px;
+}
+
+.buttonclose {
+    text-align: center;
+}
+
+.butmod{
+    text-align: center;
+    border: 3px solid black;
+    background-color: #263244;
+    font-size: 20px;
+}
+
+.closeMod {
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    color: dark;
+    background: orange;
+    cursor: pointer;
+    border-radius: 15px;
+    opacity: 1;
+}
+
 .tail h6 {
     height: 77px;
     background: #354051;
@@ -717,4 +820,23 @@ main {
     text-align: center;
     line-height: 77px;
     font-size: 11px;
+}
+
+.modal-title {
+        position: absolute;
+        left: 170px;
+        top: 10px;
+}
+
+.carousel-indicators {
+    width: 100px;
+    height: 20px;
+}
+
+.carousel-indicators li {
+    border-radius: 100%;
+    height: 8px !important;
+    width: 8px !important;
+    background-color: #ec8200 !important;
+    margin-right: 15px !important;
 }
